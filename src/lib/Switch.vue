@@ -15,7 +15,6 @@ export default {
         value: Boolean
     },
     setup(props, context) {
-        const checked = ref(false)
         const toggle = () => {
             context.emit('input', !props.value)
         }
