@@ -1,6 +1,8 @@
 <template>
 <div>
-    <button><span></span></button>
+    <button>
+        <span></span>
+    </button>
 </div>
 </template>
 
@@ -30,6 +32,10 @@ span {
     height: $h2;
     width: $h2;
     background: white;
-    border-radius: $h2/2;
+    border-radius: $h2 / 2;
+}
+
+button:hover span {
+    left: calc(100% - #{$h2} - 2px)
 }
 </style>
