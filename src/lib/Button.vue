@@ -215,11 +215,11 @@ $grey: grey;
         border-color: $blue $blue $blue transparent;
         border-style: solid;
         border-width: 2px;
-        animation: gulu-spin 1s infinite linear;
+        animation: vo-spin 1s infinite linear;
     }
 }
 
-@keyframes gulu-spin {
+@keyframes vo-spin {
     0% {
         transform: rotate(0deg)
     }
