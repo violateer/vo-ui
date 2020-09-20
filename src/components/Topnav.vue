@@ -35,6 +35,7 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
+    height: 50px;
     width: 100%;
     z-index: 10;
     justify-content: center;

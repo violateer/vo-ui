@@ -85,10 +85,11 @@ aside {
     width: 150px;
     padding: 16px;
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     padding-top: 70px;
     height: 100%;
+    z-index: 20;
 
     >h2 {
         margin-bottom: 4px;

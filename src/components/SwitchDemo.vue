@@ -14,7 +14,7 @@ export default {
         Switch
     },
     setup() {
-        const init = ref(true)
+        const init = ref(false)
         return {
             init
         }

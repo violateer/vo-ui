@@ -1,6 +1,6 @@
 <template>
 <div>
-    <button @click="toggle" :class="{checked: value}">
+    <button class="vo-switch" @click="toggle" :class="{'vo-checked': value}">
         <span></span>
     </button>
 </div>
@@ -29,7 +29,7 @@ export default {
 $h: 22px;
 $h2: $h - 4px;
 
-button {
+.vo-switch {
     height: $h;
     width: $h*2;
     border: none;
@@ -48,7 +48,7 @@ button {
         transition: left 250ms;
     }
 
-    &.checked {
+    &.vo-checked {
         background: blue;
 
         >span {
