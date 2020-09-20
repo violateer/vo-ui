@@ -3,10 +3,11 @@
     <div class="vo-dialog-overlay" @click="onClickOverlay"></div>
     <div class="vo-dialog-wrapper">
         <div class="vo-dialog">
-            <header>标题 <span @click="close" class="vo-dialog-close"></span></header>
+            <header>
+                <slot name="title" /> <span @click="close" class="vo-dialog-close"></span>
+            </header>
             <main>
-                <p>第一行字</p>
-                <p>第二行字</p>
+                <slot name="content" />
             </main>
             <footer>
                 <Button @click="cancel">Cancel</Button>
