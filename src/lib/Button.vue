@@ -1,15 +1,37 @@
 <template>
-<button class="vo-button" :class="{[`vo-theme-${theme}`]: theme}">
+<button class="vo-button" :class="classes">
     <slot />
 </button>
 </template>
 
 <script lang="ts">
+import {
+    computed
+} from 'vue'
 export default {
     props: {
         theme: {
             type: String,
             default: 'button'
+        },
+        size: {
+            type: String,
+            default: 'normal'
+        }
+    },
+    setup(props) {
+        const {
+            theme,
+            size
+        } = props
+        const classes = computed(() => {
+            return {
+                [`vo-theme-${theme}`]: theme,
+                [`vo-size-${size}`]: size,
+            }
+        })
+        return {
+            classes
         }
     }
 }
@@ -75,6 +97,20 @@ $radius: 4px;
         &:focus {
             background: darken(white, 5%);
             ;
+        }
+    }
+
+    &.vo-theme-button {
+        &.vo-size-big {
+            font-size: 24px;
+            height: 48px;
+            padding: 0 16px
+        }
+
+        &.vo-size-small {
+            font-size: 12px;
+            height: 20px;
+            padding: 0 4px;
         }
     }
 }
