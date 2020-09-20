@@ -100,18 +100,16 @@ $radius: 4px;
         }
     }
 
-    &.vo-theme-button {
-        &.vo-size-big {
-            font-size: 24px;
-            height: 48px;
-            padding: 0 16px
-        }
+    &.vo-size-big {
+        font-size: 24px;
+        height: 48px;
+        padding: 0 16px
+    }
 
-        &.vo-size-small {
-            font-size: 12px;
-            height: 20px;
-            padding: 0 4px;
-        }
+    &.vo-size-small {
+        font-size: 12px;
+        height: 20px;
+        padding: 0 4px;
     }
 }
 </style>
