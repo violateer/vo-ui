@@ -1,15 +1,18 @@
 <template>
 <div class="vo-tabs">
     <div class="vo-tabs-nav">
-        <div class="vo-tabs-nav-item" :class="{selected: title===selected}" v-for="(title,index) in titles" :key="index">{{title}}</div>
+        <div class="vo-tabs-nav-item" @click="select(title)" :class="{selected: title===selected}" v-for="(title,index) in titles" :key="index">{{title}}</div>
     </div>
     <div class="vo-tabs-content">
-        <component class="vo-tabs-content-item" v-for="(c,index) in defaults" :is="c" :key="index" />
+        <component class="vo-tabs-content-item" :is="current" />
     </div>
 </div>
 </template>
 
 <script lang="ts">
+import {
+    computed
+} from 'vue'
 import Tab from "./Tab.vue"
 export default {
     props: {
@@ -22,10 +25,20 @@ export default {
                 throw new Error('Tabs子标签必须是Tab')
             }
         })
+        const current = computed(() => {
+            return defaults.filter((tag) => {
+                return tag.props.title === props.selected
+            })[0]
+        })
         const titles = defaults.map(tag => tag.props.title)
+        const select = (title: string) => {
+            context.emit("update:selected", title)
+        }
         return {
             defaults,
-            titles
+            titles,
+            current,
+            select
         }
     }
 }
