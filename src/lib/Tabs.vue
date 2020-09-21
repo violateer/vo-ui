@@ -4,7 +4,7 @@
         <div class="vo-tabs-nav-item" @click="select(title)" :class="{selected: title===selected}" v-for="(title,index) in titles" :key="index">{{title}}</div>
     </div>
     <div class="vo-tabs-content">
-        <component class="vo-tabs-content-item" :is="current" />
+        <component class="vo-tabs-content-item" :is="current" :key="current.props.title" />
     </div>
 </div>
 </template>
@@ -26,9 +26,7 @@ export default {
             }
         })
         const current = computed(() => {
-            return defaults.filter((tag) => {
-                return tag.props.title === props.selected
-            })[0]
+            return defaults.find(tag => tag.props.title === props.selected)
         })
         const titles = defaults.map(tag => tag.props.title)
         const select = (title: string) => {
