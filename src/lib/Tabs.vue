@@ -1,7 +1,11 @@
 <template>
-<div>
-    <div v-for="(title, index) in titles" :key="index">{{title}}</div>
-    <component v-for="(c, index) in defaults" :is="c" :key="index" />
+<div class="vo-tabs">
+    <div class="vo-tabs-nav">
+        <div class="vo-tabs-nav-item" v-for="(title,index) in titles" :key="index">{{title}}</div>
+    </div>
+    <div class="vo-tabs-content">
+        <component class="vo-tabs-content-item" v-for="(c,index) in defaults" :is="c" :key="index" />
+    </div>
 </div>
 </template>
 
@@ -24,6 +28,34 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+$blue: #40a9ff;
+$color: #333;
+$border-color: #d9d9d9;
 
+.vo-tabs {
+    &-nav {
+        display: flex;
+        color: $color;
+        border-bottom: 1px solid $border-color;
+
+        &-item {
+            padding: 8px 0;
+            margin: 0 16px;
+            cursor: pointer;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.selected {
+                color: $blue;
+            }
+        }
+    }
+
+    &-content {
+        padding: 8px 0;
+    }
+}
 </style>
