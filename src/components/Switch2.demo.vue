@@ -2,7 +2,7 @@
 支持 disabled
 </demo>
 <template>
-<Switch v-model="init" disabled />
+<Switch v-model:value="init" disabled />
 </template>
 
 <script lang="ts">

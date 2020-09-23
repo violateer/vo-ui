@@ -2,7 +2,7 @@
 常规用法
 </demo>
 <template>
-<Switch v-model="init" />
+<Switch v-model:value="init" />
 </template>
 
 <script lang="ts">
