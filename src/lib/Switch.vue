@@ -1,39 +1,37 @@
 <template>
-<div>
-    <button class="vo-switch" @click="toggle" :class="{'vo-checked': value}">
-        <span></span>
-    </button>
-</div>
+<button class="vo-switch" @click="toggle" :class="{'vo-checked':value}">
+    <span></span>
+</button>
 </template>
 
-<script>
+<script lang="ts">
 import {
     ref
-} from 'vue'
+} from "vue";
 export default {
     props: {
-        value: Boolean
+        value: Boolean,
     },
     setup(props, context) {
         const toggle = () => {
-            context.emit('update:value', !props.value)
-        }
+            context.emit("update:value", !props.value);
+        };
         return {
             toggle
-        }
+        };
     }
-}
+};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 
 .vo-switch {
     height: $h;
-    width: $h*2;
+    width: $h * 2;
     border: none;
-    background: grey;
+    background: #bfbfbf;
     border-radius: $h/2;
     position: relative;
 
@@ -45,19 +43,32 @@ $h2: $h - 4px;
         width: $h2;
         background: white;
         border-radius: $h2 / 2;
-        transition: left 250ms;
+        transition: all 250ms;
     }
 
     &.vo-checked {
-        background: blue;
+        background: #1890ff;
 
         >span {
-            left: calc(100% - #{$h2} - 2px)
+            left: calc(100% - #{$h2} - 2px);
         }
     }
 
     &:focus {
-        outline: 0;
+        outline: none;
+    }
+
+    &:active {
+        >span {
+            width: $h2 + 4px;
+        }
+    }
+
+    &.vo-checked:active {
+        >span {
+            width: $h2 + 4px;
+            margin-left: -4px;
+        }
     }
 }
 </style>
