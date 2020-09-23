@@ -6,7 +6,7 @@
             <h1>VO-UI</h1>
             <h2>一个厉害的UI框架</h2>
             <p class="actions">
-                <a href="https://github.com/violateer/vo-ui">Github</a>
+                <a href="https://github.com/violateer/vo-ui" target="_blank">Github</a>
                 <router-link to="/doc">开始</router-link>
             </p>
         </div>
@@ -88,7 +88,6 @@ $color: #007974;
         flex-wrap: wrap;
 
         >li {
-            width: 400px;
             margin: 16px 0;
             display: grid;
             justify-content: start;
