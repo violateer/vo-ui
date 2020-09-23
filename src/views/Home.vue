@@ -48,10 +48,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$green: #02bcb0;
-$border-radius: 4px;
-$color: #007974;
+<style lang="less" scoped>
+@green: #02bcb0;
+@border-radius: 4px;
+@color: #007974;
 
 .topnavAndBanner {
     background: rgb(227, 255, 253);
@@ -66,8 +66,8 @@ $color: #007974;
     @media (min-width: 800px) {
         width: 800px;
 
-        >ul {
-            >li {
+        ul {
+            li {
                 width: 50%;
             }
         }
@@ -76,18 +76,18 @@ $color: #007974;
     @media (min-width: 1200px) {
         width: 1200px;
 
-        >ul {
-            >li {
+        ul {
+            li {
                 width: 33.3333%;
             }
         }
     }
 
-    >ul {
+    ul {
         display: flex;
         flex-wrap: wrap;
 
-        >li {
+        li {
             margin: 16px 0;
             display: grid;
             justify-content: start;
@@ -98,18 +98,18 @@ $color: #007974;
             grid-template-columns: 80px auto;
             grid-template-rows: 1fr auto;
 
-            >svg {
+            svg {
                 grid-area: icon;
                 width: 64px;
                 height: 64px;
             }
 
-            >h3 {
+            h3 {
                 grid-area: title;
                 font-size: 28px;
             }
 
-            >p {
+            p {
                 grid-area: text
             }
         }
@@ -117,27 +117,24 @@ $color: #007974;
 }
 
 .banner {
-    color: $color;
+    color: @color;
     padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    >.actions {
+    .actions {
         padding: 8px 0;
 
         a {
             margin: 0 8px;
-            background: $green;
+            background: @green;
             color: white;
             display: inline-block;
             padding: 8px 24px;
-            border-radius: $border-radius;
-
-            &:hover {
-                text-decoration: none;
-            }
+            border-radius: @border-radius;
+            text-decoration: none;
         }
     }
 }
