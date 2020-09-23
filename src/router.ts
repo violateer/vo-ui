@@ -18,7 +18,7 @@ export const router = createRouter({
     routes: [
         {path: '/', component: Home},
         {path: '/doc', component: Doc, children: [
-            {path: '', component: DocDemo},
+            {path: '', redirect: '/doc/intro'},
             {path: 'intro', component: loadMarkdown("intro")},
             {path: 'get-start', component: loadMarkdown("get-start")},
             {path: 'install', component: loadMarkdown("install")},
