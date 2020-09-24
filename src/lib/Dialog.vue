@@ -70,13 +70,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
-$radius: 4px;
-$border-color: #d9d9d9;
+<style lang="less">
+@radius: 4px;
+@border-color: #d9d9d9;
 
 .vo-dialog {
     background: white;
-    border-radius: $radius;
+    border-radius: @radius;
     box-shadow: 0 0 3px fade_out(black, 0.5);
     min-width: 15em;
     max-width: 90%;
@@ -97,11 +97,12 @@ $border-color: #d9d9d9;
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 11;
+        border: 1px solid red;
     }
 
     >header {
         padding: 12px 16px;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid @border-color;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -113,7 +114,7 @@ $border-color: #d9d9d9;
     }
 
     >footer {
-        border-top: 1px solid $border-color;
+        border-top: 1px solid @border-color;
         padding: 12px 16px;
         text-align: right;
     }
