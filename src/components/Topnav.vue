@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@color: #007974;
+@color: #36018c;
 
 .topnav {
     color: @color;
@@ -62,6 +62,7 @@ export default {
         >svg {
             width: 32px;
             height: 32px;
+            color: white;
         }
     }
 
@@ -72,6 +73,17 @@ export default {
 
         >li {
             margin: 0 1em;
+            color: white;
+
+            >a {
+                text-decoration: none;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: #c09dff;
+                }
+            }
+
         }
     }
 

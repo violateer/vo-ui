@@ -49,13 +49,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@green: #02bcb0;
+@purple: #36018c;
 @border-radius: 4px;
-@color: #007974;
+@color: #fff;
 
 .topnavAndBanner {
-    background: rgb(227, 255, 253);
-    background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+    background: rgb(92, 0, 175);
+    background: linear-gradient(145deg, rgba(92, 0, 175, 1) 0%, rgba(64, 0, 144, 1) 100%);
     clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -117,7 +117,7 @@ export default {
 }
 
 .banner {
-    color: @color;
+    color: white;
     padding: 100px 0;
     display: flex;
     justify-content: center;
@@ -129,12 +129,19 @@ export default {
 
         a {
             margin: 0 8px;
-            background: @green;
-            color: white;
+            background: white;
+            color: @purple;
             display: inline-block;
             padding: 8px 24px;
             border-radius: @border-radius;
             text-decoration: none;
+            font-weight: 700;
+            transition: all 250ms ease-in-out;
+
+            &:hover {
+                color: @color;
+                background: @purple;
+            }
         }
     }
 }

@@ -58,6 +58,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@purple: #36018c;
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -80,6 +82,7 @@ export default {
 
 .content {
     display: flex;
+    color: white;
 
     aside {
         flex-shrink: 0;
@@ -93,7 +96,7 @@ export default {
 }
 
 aside {
-    background: lightblue;
+    background: @purple;
     width: 150px;
     padding: 16px 0;
     position: fixed;
@@ -113,10 +116,12 @@ aside {
             a {
                 display: block;
                 padding: 4px 16px;
+                text-decoration: none;
             }
 
             .router-link-active {
                 background: white;
+                color: @purple;
             }
         }
     }
