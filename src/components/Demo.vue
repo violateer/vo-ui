@@ -19,7 +19,6 @@ import 'prismjs'
 import 'prismjs/themes/prism-coy.css'
 import {
     computed,
-    onMounted,
     ref
 } from 'vue'
 const Prism = (window as any).Prism
