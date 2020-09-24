@@ -74,16 +74,16 @@ export default {
 }
 </script>
 
-<style lang="scss">
-$blue: #40a9ff;
-$color: #333;
-$border-color: #d9d9d9;
+<style lang="less">
+@blue: #40a9ff;
+@color: #333;
+@border-color: #d9d9d9;
 
 .vo-tabs {
     &-nav {
         display: flex;
-        color: $color;
-        border-bottom: 1px solid $border-color;
+        color: @color;
+        border-bottom: 1px solid @border-color;
         position: relative;
 
         &-item {
@@ -96,14 +96,14 @@ $border-color: #d9d9d9;
             }
 
             &.selected {
-                color: $blue;
+                color: @blue;
             }
         }
 
         &-indicator {
             position: absolute;
             height: 3px;
-            background: $blue;
+            background: @blue;
             left: 0;
             bottom: -1px;
             width: 100px;
