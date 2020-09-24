@@ -46,7 +46,7 @@ export default {
 .topnav {
     color: @color;
     display: flex;
-    padding: 16px;
+    padding: 4px;
     position: fixed;
     top: 0;
     left: 0;
@@ -54,12 +54,15 @@ export default {
     z-index: 20;
     justify-content: center;
     align-items: center;
+    // background: rgba(0, 0, 0, 0.1);
+    background: @color;
 
     >.logo {
         max-width: 6em;
         margin-right: auto;
 
         >svg {
+            padding: 5px 0 0 5px;
             width: 32px;
             height: 32px;
             color: white;

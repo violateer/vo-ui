@@ -26,6 +26,7 @@ export default {
 <style lang="less">
 @h: 22px;
 @h2: @h - 4px;
+@purple: #36018c;
 
 .vo-switch {
     height: @h;
@@ -47,7 +48,7 @@ export default {
     }
 
     &.vo-checked {
-        background: #1890ff;
+        background: @purple;
 
         span {
             left: calc(100% - @h2 - 2px);

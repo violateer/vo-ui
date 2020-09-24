@@ -56,7 +56,7 @@ export default {
 @h: 32px;
 @border-color: #d9d9d9;
 @color: #333;
-@blue: #40a9ff;
+@purple: #36018c;
 @radius: 4px;
 @red: red;
 @grey: grey;
@@ -83,8 +83,8 @@ export default {
 
     &:hover,
     &:focus {
-        color: @blue;
-        border-color: @blue;
+        color: @purple;
+        border-color: @purple;
     }
 
     &:focus {
@@ -98,11 +98,11 @@ export default {
     &.vo-theme-link {
         border-color: transparent;
         box-shadow: none;
-        color: @blue;
+        color: @purple;
 
         &:hover,
         &:focus {
-            color: lighten(@blue, 10%);
+            color: lighten(@purple, 10%);
         }
     }
 
@@ -132,14 +132,14 @@ export default {
 
     &.vo-theme-button {
         &.vo-level-main {
-            background: @blue;
+            background: @purple;
             color: white;
-            border-color: @blue;
+            border-color: @purple;
 
             &:hover,
             &:focus {
-                background: darken(@blue, 10%);
-                border-color: darken(@blue, 10%);
+                background: darken(@purple, 10%);
+                border-color: darken(@purple, 10%);
             }
         }
 
@@ -169,11 +169,11 @@ export default {
 
     &.vo-theme-text {
         &.vo-level-main {
-            color: @blue;
+            color: @purple;
 
             &:hover,
             &:focus {
-                color: darken(@blue, 10%);
+                color: darken(@purple, 10%);
             }
         }
 
@@ -212,7 +212,7 @@ export default {
         display: inline-block;
         margin-right: 4px;
         border-radius: 8px;
-        border-color: @blue @blue @blue transparent;
+        border-color: @purple @purple @purple transparent;
         border-style: solid;
         border-width: 2px;
         animation: vo-spin 1s infinite linear;

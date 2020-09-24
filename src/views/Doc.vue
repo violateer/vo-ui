@@ -86,6 +86,23 @@ export default {
 
     aside {
         flex-shrink: 0;
+
+        ol {
+            li {
+                overflow: hidden;
+
+                a {
+                    transition: all 250ms;
+
+                    &:hover {
+                        background: white;
+                        color: @purple;
+                        transform: translateX(8px);
+                    }
+
+                }
+            }
+        }
     }
 
     main {
@@ -122,6 +139,7 @@ aside {
             .router-link-active {
                 background: white;
                 color: @purple;
+                transform: translateX(8px);
             }
         }
     }
