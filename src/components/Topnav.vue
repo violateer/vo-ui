@@ -40,11 +40,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$color: #007974;
+<style lang="less" scoped>
+@color: #007974;
 
 .topnav {
-    color: $color;
+    color: @color;
     display: flex;
     padding: 16px;
     position: fixed;
