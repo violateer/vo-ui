@@ -1,5 +1,5 @@
 {
-    "name": "vo-ui",
+    "name": "volateer-ui",
     "version": "0.0.1",
     "files": ["dist/lib/*"],
     "main": "dist/lib/vo.js",
