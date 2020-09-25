@@ -57,19 +57,19 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@border-color: #d9d9d9;
-@purple: #36018c;
+<style lang="scss" scoped>
+$border-color: #d9d9d9;
+$purple: #36018c;
 
 .demo {
-    border: 1px solid @border-color;
+    border: 1px solid $border-color;
     margin: 16px 0 32px;
-    color: @purple;
+    color: $purple;
 
     h2 {
         font-size: 20px;
         padding: 8px 16px;
-        border-bottom: 1px solid @border-color;
+        border-bottom: 1px solid $border-color;
     }
 
     &-component {
@@ -78,20 +78,20 @@ export default {
 
     &-actions {
         padding: 8px 16px;
-        border-top: 1px dashed @border-color;
+        border-top: 1px dashed $border-color;
         text-align: center;
         cursor: pointer;
         transition: all 250ms linear;
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.1);
-            color: rgba(@purple, 0.8);
+            color: rgba($purple, 0.8);
         }
     }
 
     &-code {
         padding: 8px 16px;
-        border-top: 1px dashed @border-color;
+        border-top: 1px dashed $border-color;
 
         pre {
             line-height: 1.1;

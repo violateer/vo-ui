@@ -52,18 +52,18 @@ export default {
 }
 </script>
 
-<style lang="less">
-@h: 32px;
-@border-color: #d9d9d9;
-@color: #333;
-@purple: #36018c;
-@radius: 4px;
-@red: red;
-@grey: grey;
+<style lang="scss">
+$h: 32px;
+$border-color: #d9d9d9;
+$color: #333;
+$purple: #36018c;
+$radius: 4px;
+$red: red;
+$grey: grey;
 
 .vo-button {
     box-sizing: border-box;
-    height: @h;
+    height: $h;
     padding: 0 12px;
     cursor: pointer;
     display: inline-flex;
@@ -71,9 +71,9 @@ export default {
     align-items: center;
     white-space: nowrap;
     background: white;
-    color: @color;
-    border: 1px solid @border-color;
-    border-radius: @radius;
+    color: $color;
+    border: 1px solid $border-color;
+    border-radius: $radius;
     box-shadow: 0 1px 0 fade-out(black, 0.95);
     transition: background 250ms;
 
@@ -83,8 +83,8 @@ export default {
 
     &:hover,
     &:focus {
-        color: @purple;
-        border-color: @purple;
+        color: $purple;
+        border-color: $purple;
     }
 
     &:focus {
@@ -98,11 +98,11 @@ export default {
     &.vo-theme-link {
         border-color: transparent;
         box-shadow: none;
-        color: @purple;
+        color: $purple;
 
         &:hover,
         &:focus {
-            color: lighten(@purple, 10%);
+            color: lighten($purple, 10%);
         }
     }
 
@@ -132,57 +132,57 @@ export default {
 
     &.vo-theme-button {
         &.vo-level-main {
-            background: @purple;
+            background: $purple;
             color: white;
-            border-color: @purple;
+            border-color: $purple;
 
             &:hover,
             &:focus {
-                background: darken(@purple, 10%);
-                border-color: darken(@purple, 10%);
+                background: darken($purple, 10%);
+                border-color: darken($purple, 10%);
             }
         }
 
         &.vo-level-danger {
-            background: @red;
-            border-color: @red;
+            background: $red;
+            border-color: $red;
             color: white;
 
             &:hover,
             &:focus {
-                background: darken(@red, 10%);
-                border-color: darken(@red, 10%);
+                background: darken($red, 10%);
+                border-color: darken($red, 10%);
             }
         }
     }
 
     &.vo-theme-link {
         &.vo-level-danger {
-            color: @red;
+            color: $red;
 
             &:hover,
             &:focus {
-                color: darken(@red, 10%);
+                color: darken($red, 10%);
             }
         }
     }
 
     &.vo-theme-text {
         &.vo-level-main {
-            color: @purple;
+            color: $purple;
 
             &:hover,
             &:focus {
-                color: darken(@purple, 10%);
+                color: darken($purple, 10%);
             }
         }
 
         &.vo-level-danger {
-            color: @red;
+            color: $red;
 
             &:hover,
             &:focus {
-                color: darken(@red, 10%);
+                color: darken($red, 10%);
             }
         }
     }
@@ -190,10 +190,10 @@ export default {
     &.vo-theme-button {
         &[disabled] {
             cursor: not-allowed;
-            color: @grey;
+            color: $grey;
 
             &:hover {
-                border-color: @grey;
+                border-color: $grey;
             }
         }
     }
@@ -202,7 +202,7 @@ export default {
     &.vo-theme-text {
         &[disabled] {
             cursor: not-allowed;
-            color: @grey;
+            color: $grey;
         }
     }
 
@@ -212,7 +212,7 @@ export default {
         display: inline-block;
         margin-right: 4px;
         border-radius: 8px;
-        border-color: @purple @purple @purple transparent;
+        border-color: $purple $purple $purple transparent;
         border-style: solid;
         border-width: 2px;
         animation: vo-spin 1s infinite linear;

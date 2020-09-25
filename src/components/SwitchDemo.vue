@@ -23,10 +23,10 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@purple: #36018c;
+<style lang="scss" scoped>
+$purple: #36018c;
 
 .title {
-    color: @purple;
+    color: $purple;
 }
 </style>

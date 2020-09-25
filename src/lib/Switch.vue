@@ -23,35 +23,35 @@ export default {
 };
 </script>
 
-<style lang="less">
-@h: 22px;
-@h2: @h - 4px;
-@purple: #36018c;
+<style lang="scss">
+$h: 22px;
+$h2: $h - 4px;
+$purple: #36018c;
 
 .vo-switch {
-    height: @h;
-    width: @h * 2;
+    height: $h;
+    width: $h * 2;
     border: none;
     background: #bfbfbf;
-    border-radius: @h/2;
+    border-radius: $h/2;
     position: relative;
 
     span {
         position: absolute;
         top: 2px;
         left: 2px;
-        height: @h2;
-        width: @h2;
+        height: $h2;
+        width: $h2;
         background: white;
-        border-radius: @h2 / 2;
+        border-radius: $h2 / 2;
         transition: all 250ms;
     }
 
     &.vo-checked {
-        background: @purple;
+        background: $purple;
 
         span {
-            left: calc(100% - @h2 - 2px);
+            left: calc(100% - #{$h2} - 2px);
         }
     }
 
@@ -61,13 +61,13 @@ export default {
 
     &:active {
         span {
-            width: @h2 + 4px;
+            width: $h2 + 4px;
         }
     }
 
     &.vo-checked:active {
         span {
-            width: @h2 + 4px;
+            width: $h2 + 4px;
             margin-left: -4px;
         }
     }
