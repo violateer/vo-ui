@@ -5,11 +5,11 @@
         <component :is="component" />
     </div>
     <div>
-        <div class="demo-actions" @click="toggleCode" v-if="!codeVisible">
-            显示代码
-        </div>
-        <div class="demo-actions" @click="hideCode" v-else>
+        <div class="demo-actions" @click="hideCode" v-if="codeVisible">
             隐藏代码
+        </div>
+        <div class="demo-actions" @click="toggleCode" v-else>
+            显示代码
         </div>
     </div>
     <div class="demo-code" v-if="codeVisible">
