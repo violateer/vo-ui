@@ -19,7 +19,6 @@
 </template>
 
 <script lang="ts">
-import Button from "../lib/Button.vue"
 import 'prismjs'
 import 'prismjs/themes/prism-coy.css'
 import {
@@ -30,9 +29,6 @@ const Prism = (window as any).Prism
 export default {
     props: {
         component: Object
-    },
-    components: {
-        Button
     },
     setup(props) {
         const html = computed(() => {
