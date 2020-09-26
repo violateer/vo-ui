@@ -1,6 +1,4 @@
-npm config set registry https://registry.npmjs.org/
-npm config get registry
+nrm use npm
 npm publish &&
 echo "success"
-npm config set registry https://registry.npm.taobao.org/
-npm config get registry
+nrm use taobao
