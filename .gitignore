@@ -3,5 +3,5 @@ node_modules
 /dist
 *.local
 /.history
-publish
+publish.sh
 deploy.sh
