@@ -5,11 +5,21 @@ import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
 
 const modifyImport = (oldStr, updateStr) => {
+    const oldStrsArr = []
     const arr = oldStr.split('\r\n')
-    const targetIndex = arr.findIndex(e => e.endsWith(".vue'"))
-    const targetStr = arr.find(e => e.endsWith(".vue'"))
-    const indexStart = targetStr.indexOf("from") + 5
-    arr[targetIndex] = targetStr.replace(targetStr.slice(indexStart), updateStr)
+    arr.map((e, index) => {
+        if(e.endsWith(".vue'")) {
+            const tempObj = {
+                value: e,
+                index: index,
+                replaceStartIndex: e.indexOf("from") + 5
+            }
+            oldStrsArr.push(tempObj)
+        }
+    })
+    oldStrsArr.map(e => {
+        arr[e.index] = e.value.replace(e.value.slice(e.replaceStartIndex), updateStr)
+    })
     return arr.join('\r\n')
 }
 
