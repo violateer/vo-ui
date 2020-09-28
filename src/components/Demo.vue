@@ -4,7 +4,7 @@
     <div class="demo-component">
         <component :is="component" />
     </div>
-    <div>
+    <div class="demo-togglebutton">
         <div class="demo-actions" @click="hideCode" v-if="codeVisible">
             隐藏代码
         </div>
@@ -72,6 +72,19 @@ $purple: #36018c;
         padding: 16px;
     }
 
+    &-togglebutton {
+        -o-user-select: none;
+        /*火狐 firefox*/
+        -moz-user-select: none;
+        /*webkit浏览器*/
+        -webkit-user-select: none;
+        /*IE10+*/
+        -ms-user-select: none;
+        /*早期的浏览器*/
+        -khtml-user-select: none;
+        user-select: none;
+    }
+
     &-actions {
         padding: 8px 16px;
         border-top: 1px dashed $border-color;
@@ -95,5 +108,6 @@ $purple: #36018c;
             margin: 0;
         }
     }
+
 }
 </style>
