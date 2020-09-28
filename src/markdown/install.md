@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install vo-ui
+npm install violateer-ui
 ```
 
 或
 
 ```
-yarn add vo-ui
+yarn add violateer-ui
 ```
 
 下一节：[开始使用](#/doc/get-start)

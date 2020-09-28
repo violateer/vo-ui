@@ -47,6 +47,10 @@ $purple: #36018c;
         transition: all 250ms;
     }
 
+    &[disabled] {
+        cursor: not-allowed;
+    }
+
     &.vo-checked {
         background: $purple;
 

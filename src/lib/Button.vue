@@ -60,6 +60,7 @@ $purple: #36018c;
 $radius: 4px;
 $red: red;
 $grey: grey;
+$warning-color: #f7c700;
 
 .vo-button {
     box-sizing: border-box;
@@ -75,7 +76,7 @@ $grey: grey;
     border: 1px solid $border-color;
     border-radius: $radius;
     box-shadow: 0 1px 0 fade-out(black, 0.95);
-    transition: background 250ms;
+    transition: all 250ms;
 
     &+& {
         margin-left: 8px;
@@ -85,6 +86,10 @@ $grey: grey;
     &:focus {
         color: $purple;
         border-color: $purple;
+
+        & .vo-loadingIndicator {
+            border-color: $purple $purple $purple transparent;
+        }
     }
 
     &:focus {
@@ -98,30 +103,45 @@ $grey: grey;
     &.vo-theme-link {
         border-color: transparent;
         box-shadow: none;
-        color: $purple;
+        color: $color;
 
         &:hover,
         &:focus {
-            color: lighten($purple, 10%);
+            color: lighten($purple, 35%);
+            background: darken(white, 5%);
+
+            & .vo-loadingIndicator {
+                border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+            }
         }
+
     }
 
-    &.vo-theme-text {
-        border-color: transparent;
+    &.vo-theme-circle {
+        border-color: $purple;
         box-shadow: none;
-        color: red;
+        color: $purple;
+        border-radius: $h / 2;
 
         &:hover,
         &:focus {
-            background: darken(white, 5%);
-            ;
+            color: white;
+            background: $purple;
+
+            & .vo-loadingIndicator {
+                border-color: white white white transparent;
+            }
         }
     }
 
     &.vo-size-big {
         font-size: 24px;
         height: 48px;
-        padding: 0 16px
+        padding: 0 16px;
+
+        &.vo-theme-circle {
+            border-radius: 24px;
+        }
     }
 
     &.vo-size-small {
@@ -140,6 +160,26 @@ $grey: grey;
             &:focus {
                 background: darken($purple, 10%);
                 border-color: darken($purple, 10%);
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
+            }
+        }
+
+        &.vo-level-warning {
+            background: $warning-color;
+            color: white;
+            border-color: $warning-color;
+
+            &:hover,
+            &:focus {
+                background: darken($warning-color, 5%);
+                border-color: darken($warning-color, 10%);
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
             }
         }
 
@@ -152,6 +192,10 @@ $grey: grey;
             &:focus {
                 background: darken($red, 10%);
                 border-color: darken($red, 10%);
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
             }
         }
     }
@@ -163,26 +207,68 @@ $grey: grey;
             &:hover,
             &:focus {
                 color: darken($red, 10%);
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
+            }
+        }
+
+        &.vo-level-warning {
+            color: $warning-color;
+
+            &:hover,
+            &:focus {
+                color: lighten($warning-color, 5%);
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
             }
         }
     }
 
-    &.vo-theme-text {
+    &.vo-theme-circle {
         &.vo-level-main {
             color: $purple;
 
             &:hover,
             &:focus {
-                color: darken($purple, 10%);
+                color: white;
+
+                & .vo-loadingIndicator {
+                    border-color: white white white transparent;
+                }
+            }
+        }
+
+        &.vo-level-warning {
+            color: $warning-color;
+            border-color: $warning-color;
+
+            &:hover,
+            &:focus {
+                color: white;
+                background-color: $warning-color;
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
             }
         }
 
         &.vo-level-danger {
             color: $red;
+            border-color: $red;
 
             &:hover,
             &:focus {
-                color: darken($red, 10%);
+                color: white;
+                background-color: $red;
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
             }
         }
     }
@@ -194,15 +280,25 @@ $grey: grey;
 
             &:hover {
                 border-color: $grey;
+
+                & .vo-loadingIndicator {
+                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                }
             }
         }
     }
 
     &.vo-theme-link,
-    &.vo-theme-text {
+    &.vo-theme-circle {
         &[disabled] {
             cursor: not-allowed;
             color: $grey;
+            border-color: $grey;
+
+            &:hover {
+                background-color: #fff;
+
+            }
         }
     }
 
