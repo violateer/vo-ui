@@ -2,9 +2,9 @@
 loading
 </demo>
 <template>
-<Button loading>加载中</Button>
-<Button loading theme="link">加载中</Button>
-<Button loading theme="circle">加载中</Button>
+<Button loading level="main">加载中</Button>
+<Button loading theme="link" level="warning">加载中</Button>
+<Button loading theme="circle" level="danger">加载中</Button>
 </template>
 
 <script>

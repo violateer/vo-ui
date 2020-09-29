@@ -156,14 +156,15 @@ $warning-color: #f7c700;
             color: white;
             border-color: $purple;
 
+            >.vo-loadingIndicator {
+                border-color: white white white transparent;
+            }
+
             &:hover,
             &:focus {
                 background: darken($purple, 10%);
                 border-color: darken($purple, 10%);
 
-                & .vo-loadingIndicator {
-                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
-                }
             }
         }
 
@@ -172,14 +173,15 @@ $warning-color: #f7c700;
             color: white;
             border-color: $warning-color;
 
+            >.vo-loadingIndicator {
+                border-color: white white white transparent;
+            }
+
             &:hover,
             &:focus {
                 background: darken($warning-color, 5%);
                 border-color: darken($warning-color, 10%);
 
-                & .vo-loadingIndicator {
-                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
-                }
             }
         }
 
@@ -188,14 +190,15 @@ $warning-color: #f7c700;
             border-color: $red;
             color: white;
 
+            >.vo-loadingIndicator {
+                border-color: white white white transparent;
+            }
+
             &:hover,
             &:focus {
                 background: darken($red, 10%);
                 border-color: darken($red, 10%);
 
-                & .vo-loadingIndicator {
-                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
-                }
             }
         }
     }
@@ -204,12 +207,16 @@ $warning-color: #f7c700;
         &.vo-level-danger {
             color: $red;
 
+            >.vo-loadingIndicator {
+                border-color: $red $red $red transparent;
+            }
+
             &:hover,
             &:focus {
-                color: darken($red, 10%);
+                color: lighten($red, 20%);
 
                 & .vo-loadingIndicator {
-                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                    border-color: lighten($red, 20%) lighten($red, 20%) lighten($red, 20%) transparent;
                 }
             }
         }
@@ -217,12 +224,16 @@ $warning-color: #f7c700;
         &.vo-level-warning {
             color: $warning-color;
 
+            >.vo-loadingIndicator {
+                border-color: $warning-color $warning-color $warning-color transparent;
+            }
+
             &:hover,
             &:focus {
-                color: lighten($warning-color, 5%);
+                color: lighten($warning-color, 20%);
 
                 & .vo-loadingIndicator {
-                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                    border-color: lighten($warning-color, 20%) lighten($warning-color, 20%) lighten($warning-color, 20%) transparent;
                 }
             }
         }
@@ -231,6 +242,10 @@ $warning-color: #f7c700;
     &.vo-theme-circle {
         &.vo-level-main {
             color: $purple;
+
+            >.vo-loadingIndicator {
+                border-color: $purple $purple $purple transparent;
+            }
 
             &:hover,
             &:focus {
@@ -246,13 +261,17 @@ $warning-color: #f7c700;
             color: $warning-color;
             border-color: $warning-color;
 
+            >.vo-loadingIndicator {
+                border-color: $warning-color $warning-color $warning-color transparent;
+            }
+
             &:hover,
             &:focus {
                 color: white;
                 background-color: $warning-color;
 
                 & .vo-loadingIndicator {
-                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                    border-color: white white white transparent;
                 }
             }
         }
@@ -261,13 +280,17 @@ $warning-color: #f7c700;
             color: $red;
             border-color: $red;
 
+            >.vo-loadingIndicator {
+                border-color: $red $red $red transparent;
+            }
+
             &:hover,
             &:focus {
                 color: white;
                 background-color: $red;
 
                 & .vo-loadingIndicator {
-                    border-color: lighten($purple, 35%) lighten($purple, 35%) lighten($purple, 35%) transparent;
+                    border-color: white white white transparent;
                 }
             }
         }
