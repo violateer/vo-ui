@@ -1,8 +1,8 @@
 <demo>
-调用openDialog函数使用
+绑定openDialog函数使用
 </demo>
 <template>
-<Button @click="showDialog">show</Button>
+<Button @click="showDialog">点击打开对话框</Button>
 </template>
 
 <script lang="ts">

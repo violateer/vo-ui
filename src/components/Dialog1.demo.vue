@@ -2,13 +2,13 @@
 调用Dialog组件使用
 </demo>
 <template>
-<Button @click="toggle">toggle</Button>
+<Button @click="toggle">点击打开对话框</Button>
 <Dialog v-model:visible="DialogVisible" :closeOnClickOverlay="true" :ok="ok" :cancel="cancel">
     <template v-slot:content>
         <p>内容</p>
     </template>
     <template v-slot:title>
-        <strong>加粗的标题</strong>
+        <span>标题</span>
     </template>
 </Dialog>
 </template>

@@ -12,7 +12,7 @@
                 </main>
                 <footer>
                     <Button @click="cancel">Cancel</Button>
-                    <Button @click="ok">Ok</Button>
+                    <Button @click="ok" level="main">Ok</Button>
                 </footer>
             </div>
         </div>
@@ -73,13 +73,15 @@ export default {
 <style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
+$purple: #36018c;
 
 .vo-dialog {
     background: white;
     border-radius: $radius;
     box-shadow: 0 0 3px fade_out(black, 0.5);
-    min-width: 15em;
+    min-width: 25em;
     max-width: 90%;
+    min-height: 15em;
 
     &-overlay {
         position: fixed;
@@ -97,7 +99,7 @@ $border-color: #d9d9d9;
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 11;
-        border: 1px solid red;
+        border: 1px solid $purple;
     }
 
     >header {
@@ -114,6 +116,10 @@ $border-color: #d9d9d9;
     }
 
     >footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        right: 5px;
         border-top: 1px solid $border-color;
         padding: 12px 16px;
         text-align: right;
