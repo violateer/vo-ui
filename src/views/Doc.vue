@@ -83,19 +83,22 @@ export default {
 .content {
     display: flex;
     color: white;
-    -o-user-select: none;
-    /*火狐 firefox*/
-    -moz-user-select: none;
-    /*webkit浏览器*/
-    -webkit-user-select: none;
-    /*IE10+*/
-    -ms-user-select: none;
-    /*早期的浏览器*/
-    -khtml-user-select: none;
-    user-select: none;
 
     aside {
         flex-shrink: 0;
+
+        h2 {
+            -o-user-select: none;
+            /*火狐 firefox*/
+            -moz-user-select: none;
+            /*webkit浏览器*/
+            -webkit-user-select: none;
+            /*IE10+*/
+            -ms-user-select: none;
+            /*早期的浏览器*/
+            -khtml-user-select: none;
+            user-select: none;
+        }
 
         ol {
             li {
@@ -103,6 +106,16 @@ export default {
 
                 a {
                     transition: all 250ms;
+                    -o-user-select: none;
+                    /*火狐 firefox*/
+                    -moz-user-select: none;
+                    /*webkit浏览器*/
+                    -webkit-user-select: none;
+                    /*IE10+*/
+                    -ms-user-select: none;
+                    /*早期的浏览器*/
+                    -khtml-user-select: none;
+                    user-select: none;
 
                     &:hover {
                         background: white;

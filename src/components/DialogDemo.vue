@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
     <div>Dialog示例</div>
     <h1>示例1</h1>
     <Button @click="toggle">toggle</Button>
@@ -63,6 +63,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$purple: #36018c;
 
+.container {
+    color: $purple;
+}
 </style>

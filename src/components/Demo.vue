@@ -66,10 +66,30 @@ $purple: #36018c;
         font-size: 20px;
         padding: 8px 16px;
         border-bottom: 1px solid $border-color;
+        -o-user-select: none;
+        /*火狐 firefox*/
+        -moz-user-select: none;
+        /*webkit浏览器*/
+        -webkit-user-select: none;
+        /*IE10+*/
+        -ms-user-select: none;
+        /*早期的浏览器*/
+        -khtml-user-select: none;
+        user-select: none;
     }
 
     &-component {
         padding: 16px;
+        -o-user-select: none;
+        /*火狐 firefox*/
+        -moz-user-select: none;
+        /*webkit浏览器*/
+        -webkit-user-select: none;
+        /*IE10+*/
+        -ms-user-select: none;
+        /*早期的浏览器*/
+        -khtml-user-select: none;
+        user-select: none;
     }
 
     &-togglebutton {
