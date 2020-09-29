@@ -81,6 +81,8 @@ $color: #333;
 $border-color: #d9d9d9;
 
 .vo-tabs {
+    color: #000;
+
     &-nav {
         display: flex;
         color: $color;

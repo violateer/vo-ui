@@ -24,6 +24,8 @@ export default {
 $purple: #36018c;
 
 .container {
-    color: $purple;
+    >h1 {
+        color: $purple;
+    }
 }
 </style>

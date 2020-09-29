@@ -60,12 +60,12 @@ $purple: #36018c;
 .demo {
     border: 1px solid $border-color;
     margin: 16px 0 32px;
-    color: $purple;
 
-    h2 {
+    >h2 {
         font-size: 20px;
         padding: 8px 16px;
         border-bottom: 1px solid $border-color;
+        color: $purple;
         -o-user-select: none;
         /*火狐 firefox*/
         -moz-user-select: none;
