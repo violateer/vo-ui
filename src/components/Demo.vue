@@ -111,6 +111,7 @@ $purple: #36018c;
         text-align: center;
         cursor: pointer;
         transition: all 250ms linear;
+        color: $purple;
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.1);
