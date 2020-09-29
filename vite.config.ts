@@ -8,7 +8,7 @@ const modifyImport = (oldStr, updateStr) => {
     const oldStrsArr = []
     const arr = oldStr.split('\r\n')
     arr.map((e, index) => {
-        if(e.endsWith(".vue'")) {
+        if(e.endsWith(".vue'") || e.endsWith("openDialog'")) {
             const tempObj = {
                 value: e,
                 index: index,

@@ -15,7 +15,8 @@ export const openDialog = (options) => {
                     close()
                 }
             },
-            ok,cancel
+            ok,
+            cancel
             }, {
                 title,
                 content
