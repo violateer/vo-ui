@@ -6,7 +6,7 @@
 </div>
 </template>
 
-<script>
+<script lang="ts">
 import {
     provide
 } from 'vue'
@@ -27,16 +27,12 @@ $purple:#36018c;
 $border-radius: 4px;
 
 .vo-collapse {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    width: 10em;
-    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
     background-color: transparent;
     color: $purple;
     overflow: hidden;
-    background-color: skyblue;
+    // background-color: skyblue;
 
     -o-user-select: none;
     /*火狐 firefox*/
@@ -51,11 +47,12 @@ $border-radius: 4px;
 
     &-content {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         transition: all 250ms;
         height: 100%;
+
     }
 }
 </style>
