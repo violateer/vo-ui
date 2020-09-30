@@ -1,38 +1,23 @@
 <template>
 <div class="vo-collapse">
-    <div class="title" @click="toggleContentVisible">{{title}}</div>
-    <ul class="content" v-if="isVisible">
-        <li>菜单1</li>
-        <li>菜单2</li>
-        <li>菜单3</li>
-        <li>菜单4</li>
-        <li>菜单5</li>
-    </ul>
+    <div class="vo-collapse-content">
+        <slot />
+    </div>
 </div>
 </template>
 
 <script>
 import {
-    ref
+    provide
 } from 'vue'
 export default {
     props: {
-        title: {
-            type: String,
-            default: "标题"
+        value: {
+            type: Array
         }
     },
     setup(props) {
-        const title = props.title
-        const isVisible = ref(false)
-        const toggleContentVisible = () => {
-            isVisible.value = !isVisible.value
-        }
-        return {
-            title,
-            isVisible,
-            toggleContentVisible
-        }
+        provide('value', props.value)
     }
 }
 </script>
@@ -42,10 +27,17 @@ $purple:#36018c;
 $border-radius: 4px;
 
 .vo-collapse {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
     width: 10em;
     text-align: center;
-    background-color: skyblue;
+    background-color: transparent;
     color: $purple;
+    overflow: hidden;
+    background-color: skyblue;
+
     -o-user-select: none;
     /*火狐 firefox*/
     -moz-user-select: none;
@@ -56,5 +48,14 @@ $border-radius: 4px;
     /*早期的浏览器*/
     -khtml-user-select: none;
     user-select: none;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 250ms;
+        height: 100%;
+    }
 }
 </style>

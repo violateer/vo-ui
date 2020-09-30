@@ -2,10 +2,10 @@
 <div class="container">
     <h1>collapse组件</h1>
     <hr />
-    <Collapse title="手风琴下拉菜单">
-        <CollapseItem>菜单1</CollapseItem>
-        <CollapseItem>菜单2</CollapseItem>
-        <CollapseItem>菜单3</CollapseItem>
+    <Collapse :value="activeName">
+        <CollapseItem title="菜单1" name="1">内容1</CollapseItem>
+        <CollapseItem title="菜单2" name="2">内容2</CollapseItem>
+        <CollapseItem title="菜单3" name="3">内容3</CollapseItem>
     </Collapse>
 </div>
 </template>
@@ -17,6 +17,12 @@ export default {
     components: {
         Collapse,
         CollapseItem
+    },
+    setup() {
+        const activeName = ["1"]
+        return {
+            activeName
+        }
     }
 }
 </script>
