@@ -19,7 +19,7 @@ export default {
         CollapseItem
     },
     setup() {
-        const activeName = ["1"]
+        const activeName = ["1", "2", "3"]
         return {
             activeName
         }

@@ -25,10 +25,7 @@ export default {
     },
     setup(props) {
         const value = inject('value')
-        console.log(value)
-        const isVisible = props.name.indexOf(value) > -1
-        console.log(props.name)
-        console.log(isVisible)
+        const isVisible = value.indexOf(props.name) > -1
         const toggleContentVisible = () => {
             isVisible.value = !isVisible.value
         }
