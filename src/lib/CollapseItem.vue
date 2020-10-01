@@ -1,9 +1,9 @@
 <template>
 <div class="vo-collapse-item">
-    <div class="vo-collapse-item-header" @click="toggleContentVisible" @mouseover="showContent($event)" @mouseleave="hideContent($event)">
+    <div class="vo-collapse-item-header" @mouseover="showContent($event)" @mouseleave="hideContent($event)">
         <span>{{title}}</span>
     </div>
-    <div class="vo-collapse-item-content" v-show="isVisible">
+    <div class="vo-collapse-item-content" @mouseover="holdContent($event)" @mouseleave="unHoldContent($event)">
         <slot />
     </div>
 </div>
@@ -24,14 +24,14 @@ export default {
         }
     },
     setup(props) {
-        const value = < any[] > inject('value')
-        let isVisible = value.indexOf(props.name) > -1
-        const toggleContentVisible = () => {
-            isVisible = !isVisible
-        }
         const toggleContent = (e, height) => {
             const count = e.currentTarget.nextElementSibling.children.length
             const voContent = e.currentTarget.nextElementSibling
+            voContent.style.height = height * count + 'px';
+        }
+        const toggleInsideContent = (e, height) => {
+            const count = e.currentTarget.children.length
+            const voContent = e.currentTarget
             voContent.style.height = height * count + 'px';
         }
         const showContent = (e) => {
@@ -41,11 +41,17 @@ export default {
         const hideContent = (e) => {
             toggleContent(e, 0)
         }
+        const holdContent = (e) => {
+            toggleInsideContent(e, 24)
+        }
+        const unHoldContent = (e) => {
+            toggleInsideContent(e, 0)
+        }
         return {
-            isVisible,
-            toggleContentVisible,
             showContent,
-            hideContent
+            hideContent,
+            holdContent,
+            unHoldContent
         }
     }
 }
@@ -89,7 +95,6 @@ $purple: #36018c;
         text-align: center;
         transition: all 250ms;
         overflow: hidden;
-
     }
 }
 </style>
