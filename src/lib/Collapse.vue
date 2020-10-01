@@ -7,19 +7,7 @@
 </template>
 
 <script lang="ts">
-import {
-    provide
-} from 'vue'
-export default {
-    props: {
-        value: {
-            type: Array
-        }
-    },
-    setup(props) {
-        provide('value', props.value)
-    }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -32,7 +20,6 @@ $border-radius: 4px;
     background-color: transparent;
     color: $purple;
     overflow: hidden;
-    // background-color: skyblue;
 
     -o-user-select: none;
     /*火狐 firefox*/

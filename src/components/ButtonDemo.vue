@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <h1>Switch 组件示例 </h1>
+    <h1>Button 组件示例 </h1>
     <Demo :component="Button1Demo" />
     <Demo :component="Button2Demo" />
     <Demo :component="Button3Demo" />
@@ -21,11 +21,7 @@ export default {
         Demo
     },
     setup() {
-        const onClick = () => {
-            console.log('Hi')
-        }
         return {
-            onClick,
             Button1Demo,
             Button2Demo,
             Button3Demo,

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
     <h1>Switch 组件示例 </h1>
     <Demo :component="Switch1Demo" />
     <Demo :component="Switch2Demo" />
@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 $purple: #36018c;
 
-.title {
+.container {
     color: $purple;
 }
 </style>
